@@ -1,0 +1,6 @@
+applications:
+- name: veraz-up
+  disk_quota: 1G
+  instances: 1
+  memory: 512M
+  stack: cflinuxfs3
