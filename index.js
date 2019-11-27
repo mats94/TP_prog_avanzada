@@ -45,6 +45,10 @@ app.get('/', function(req,res){
  res.send('Hola')
 })
 
+app.post('/registro', function(req,res){
+  pushVeraz(req.headers.dni,req.headers.estado,res)
+})
+
 async function buscar(dni,jwt,res){
     await MongoClient.connect(url, function(err, client) {
         if (err) throw err;
